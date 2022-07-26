@@ -12,6 +12,12 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+/* NavBar styling */
 .navbar{
   background-color: red;
+}
+.nav-list li{
+  float:right;
+  display: inline;
+  padding-right: 20px;
 }
