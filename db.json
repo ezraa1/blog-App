@@ -2,18 +2,22 @@
   "posts": [
     {
       "id": 1,
-      "title": "json-server",
-      "author": "typicode"
-    }
-  ],
-  "comments": [
+      "title": "Messi outshine Neymar",
+      "content": "Lionel Messi and Neymar combined to devastating effect as Paris Saint-Germain thrashed Gamba Osaka 6-2 on Monday to finish their pre-season Japan tour with three wins out of three. The star forwards both played the opening 70 minutes in Osaka and Neymar scored a first-half penalty before setting up a goal for Messi.",
+      "author": "Fabrizio"
+    },
     {
-      "id": 1,
-      "body": "some comment",
-      "postId": 1
+      "id": 2,
+      "title": "James Harden on taking pay cut ",
+      "content": "James Harden's new contract with the Philadelphia 76ers isn't finalized yet, but it will feature Harden taking a substantial pay cut for the 2022-23 NBA season so the Sixers have additional cap space to fill out the rest of the roster. They've used that space to sign P.J. Tucker and Danuel House (both Harden's former teammates in Houston), along with Trevelin Queen. Plus, there still could be more moves to come. In an interview with Yahoo Sports, Harden explained his motivation behind signing a team-friendly deal. ",
+      "author": "Mohaa"
+    },
+    {
+      "id": 3,
+      "title": "Athlete Refugee Team fields squad of three in Oregon",
+      "content": "While more than 1700 athletes from around the world flocked to Eugene for the World Athletics Championships Oregon22 last week, there were a few whose journey to this year’s biggest global stage has been more arduous and remarkable than most.These individuals belong to the Athlete Refugee Team, a squad that represents a community of more than 89 million people from around the world who have been forcibly displaced from their homes. This year marked the third time the Athlete Refugee Team have competed at the World Athletics Championships, continuing an almost uninterrupted streak of appearances at each World Athletics Series event since 2017. Through their hardships and triumphs, a trio of world-class athletes provided inspiration for the tens of millions of displaced peoples around the world.",
+      "author": "Kaloleni"
     }
-  ],
-  "profile": {
-    "name": "typicode"
-  }
+  ]
+ 
 }
