@@ -8,6 +8,7 @@ import NavBar from "./NavBar";
 function App(){
     
 const[posts, setPosts]=useState([])
+
     
 useEffect(()=>{
     fetch('http://localhost:3000/posts')
@@ -21,7 +22,12 @@ useEffect(()=>{
 
  return(
 <div className="app">
+
 <NavBar />
+{/* <button onClick={handleClick} >{showForm ? "LOGIN": "SUBMIT"}</button><br></br>
+
+        {showForm ? <Login /> : null} */}
+
 <PostsContainer posts={posts}/>
 
 </div>

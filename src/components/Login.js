@@ -1,10 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 
 function Login(){
 
 
     return(
-        <form>
+        
+        
+        <form >
+        
         <label>
           Username:<br></br>
           <input type="text" name="name" />
@@ -14,8 +17,9 @@ function Login(){
           <input type="text" name="name" />
         </label><br></br>
          
-        <input type="submit" value="Submit" /><br></br>
+        <input type="submit" value="Submit" />
       </form>
+     
     )
 }
 export default Login;
