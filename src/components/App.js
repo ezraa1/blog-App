@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import PostsContainer from "./PostsContainer";
+import NavBar from "./NavBar";
 
 
  
@@ -19,7 +20,8 @@ useEffect(()=>{
     
 
  return(
-<div>
+<div className="app">
+<NavBar />
 <PostsContainer posts={posts}/>
 
 </div>
