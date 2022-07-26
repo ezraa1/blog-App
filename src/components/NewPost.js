@@ -3,7 +3,9 @@ import React, { useState } from "react";
 
 function NewPost(){
     const[NewPostForm, setNewPostForm]= useState({title:"", content:"",author:""})
-   
+    function handleOnChange(event){
+        setNewPostForm(NewPostForm=>({...NewPostForm,[event.target.name]: event.target.value}))
+        }
 
 return(
 
