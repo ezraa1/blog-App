@@ -1,16 +1,16 @@
 import React from "react";
 import Post from "./Post";
 
-function PostsContainer(posts){
+function PostsContainer({posts}){
 
 
 
 return(
 
-{/* <div className="poems-container">
-  {posts.map(post=>(<Post key={post.id} title={post.title} content={post.content} author = {post.author}>
-    </Post>)) }
-</div> */}
+<div className="poems-container">
+{posts.map(post=>(<Post key={post.id} title={post.title} content={post.content} author = {post.author}>
+  </Post>)) }
+</div> 
 
 )
 
