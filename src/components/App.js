@@ -21,7 +21,9 @@ useEffect(()=>{
     
 
  return(
-<div className="app">
+<div className="app" style={{ 
+      backgroundImage: `url("background.jpg")` 
+    }}>
 
 <NavBar />
 {/* <button onClick={handleClick} >{showForm ? "LOGIN": "SUBMIT"}</button><br></br>

@@ -4,7 +4,6 @@ import Post from "./Post";
 function PostsContainer({posts}){
 
 
-
 return(
 
 <div className="poems-container">

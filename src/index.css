@@ -5,8 +5,11 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: rgb(122, 226, 96);
+  
   margin-left: 20px;
+  background-image: url("background.jpg" );
+  background-repeat: no-repeat;
+  background-size: 500px, 100px;
 }
 
 code {
@@ -16,6 +19,8 @@ code {
 /* NavBar styling */
 .navbar{
   background-color: red;
+  padding-bottom: 20px;
+  padding-top: 3px;
 }
 .navbar li{
   float:right;

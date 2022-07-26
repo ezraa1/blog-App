@@ -17,7 +17,8 @@ function NavBar(){
         <li><button>About Us</button></li>
         <li><button>Contact Us</button></li>
         <li><button>Home</button></li>
-        <li><button onClick={handleClick}>{showForm ? <Login/>:"Login"}</button></li>
+       <button onClick={handleClick}>{showForm ? "Close":"Login" }</button>
+       {showForm ? <Login /> : null}
     </ul>
 
 
