@@ -1,6 +1,10 @@
 import React, { useEffect, useState } from "react";
-import PostsContainer from "./PostsContainer";
+import {  Route, Routes } from "react-router-dom";
+import Home from "./Home";
+import About from "./About";
+import Login from "./Login";
 import NavBar from "./NavBar";
+import PostsContainer from "./PostsContainer";
 import NewPost from "./NewPost";
 
 
@@ -26,16 +30,38 @@ useEffect(()=>{
     
 
  return(
-<div>
+    <div>
+    <NavBar />
+    <Routes>
 
-<NavBar />
+      <Route path="/about" element={<About />} />
+      
+      <Route path="/login" element=  {<Login />}  />
+      
+      <Route exact path="/" element={<Home />}  />
+      
+      </Routes>
+
+<div>
 <button  onClick={handleClick} >{showAddForm ? "Click": "Click"} to add new post</button><br></br>
+
+{showAddForm ? <NewPost /> : null}
+</div>
+
+      <div>
+      <PostsContainer posts={posts}/>
+      </div>
+  </div>
+
+
+
+/* <button  onClick={handleClick} >{showAddForm ? "Click": "Click"} to add new post</button><br></br>
 
         {showAddForm ? <NewPost /> : null}
 
-<PostsContainer posts={posts}/>
+<PostsContainer posts={posts}/> */
 
-</div>
  )
+ 
 }
  export default App;
