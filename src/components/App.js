@@ -29,7 +29,7 @@ useEffect(()=>{
 <div>
 
 <NavBar />
-<button class= "card" onClick={handleClick} >{showAddForm ? "Click": "Click"} to add new post</button><br></br>
+<button  onClick={handleClick} >{showAddForm ? "Click": "Click"} to add new post</button><br></br>
 
         {showAddForm ? <NewPost /> : null}
 

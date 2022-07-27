@@ -12,8 +12,9 @@ return(
     <form  class="card">
     Title:<br></br>
 <input onChange={handleOnChange} name="title" value={NewPostForm.title} placeholder="Title" /><br></br>
-<input onChange={handleOnChange} name="content" value={NewPostForm.content} placeholder="Author" /><br></br>
-<textarea  onChange={handleOnChange} name="author" value={NewPostForm.author}
+Username:<br></br>
+<input onChange={handleOnChange} name="content" value={NewPostForm.content} placeholder="" /><br></br>
+<textarea  onChange={handleOnChange} name="username" value={NewPostForm.author}
  placeholder="Type the news..." rows={20} /><br></br>
 <input type="submit" value="Submit" />
 </form>
