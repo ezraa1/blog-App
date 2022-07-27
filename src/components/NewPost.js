@@ -9,11 +9,12 @@ function NewPost(){
 
 return(
 
-    <form  className="new-poem-form">
-<input onChange={handleOnChange} name="title" value={NewPostForm.title} placeholder="Title" />Title<br></br>
+    <form  class="card">
+    Title:<br></br>
+<input onChange={handleOnChange} name="title" value={NewPostForm.title} placeholder="Title" /><br></br>
 <input onChange={handleOnChange} name="content" value={NewPostForm.content} placeholder="Author" /><br></br>
 <textarea  onChange={handleOnChange} name="author" value={NewPostForm.author}
- placeholder="Type the news..." rows={20} />
+ placeholder="Type the news..." rows={20} /><br></br>
 <input type="submit" value="Submit" />
 </form>
 )
