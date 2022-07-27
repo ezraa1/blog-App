@@ -5,11 +5,11 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  
+  margin-right: 10px;
   margin-left: 20px;
   background-image: url("background.jpg" );
   background-repeat: no-repeat;
-  background-size:150vh;
+  background-size:155vh;
   
 }
 
@@ -19,12 +19,21 @@ code {
 }
 /* NavBar styling */
 .navbar{
-  background-color: red;
+  background-color: rgb(177, 84, 122);
   padding-bottom: 20px;
   padding-top: 3px;
+  box-shadow: 5px 10px 18px white ;
 }
 .navbar li{
   float:right;
   display: inline;
   padding-right: 20px;
+}
+.navbar h3{
+  margin-left: 150px;
+  margin-top: -2%;
+}
+/* newform styling */
+.card{
+  float:right;
 }
