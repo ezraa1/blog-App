@@ -17,8 +17,10 @@ function NavBar(){
         <li><button>About Us</button></li>
         <li><button>Contact Us</button></li>
         <li><button>Home</button></li>
-       <button onClick={handleClick}>{showForm ? "Close":"Login" }</button>
+        
+       <button onClick={handleClick}>{showForm ? "Close":"Login" }</button> <h3>SPORTS TODAY</h3>
        {showForm ? <Login /> : null}
+      
     </ul>
 
 
