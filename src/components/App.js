@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import PostsContainer from "./PostsContainer";
 import NavBar from "./NavBar";
+import NewPost from "./NewPost";
 
 
  
@@ -29,7 +30,7 @@ useEffect(()=>{
 {/* <button onClick={handleClick} >{showForm ? "LOGIN": "SUBMIT"}</button><br></br>
 
         {showForm ? <Login /> : null} */}
-
+<NewPost />
 <PostsContainer posts={posts}/>
 
 </div>
