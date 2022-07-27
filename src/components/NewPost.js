@@ -10,7 +10,8 @@ function NewPost(){
 return(
 
     <form  className="new-poem-form">
-<input onChange={handleOnChange} name="title" value={NewPostForm.title} placeholder="Title" />Title<br></br>
+    Title:<br></br>
+<input onChange={handleOnChange} name="title" value={NewPostForm.title} placeholder="Title" /><br></br>
 <input onChange={handleOnChange} name="content" value={NewPostForm.content} placeholder="Author" /><br></br>
 <textarea  onChange={handleOnChange} name="author" value={NewPostForm.author}
  placeholder="Type the news..." rows={20} />
