@@ -9,7 +9,11 @@ import NewPost from "./NewPost";
 function App(){
     
 const[posts, setPosts]=useState([])
+const [showAddForm, setShowAddForm]=useState(false)
 
+function handleClick(){
+    setShowAddForm(showAddForm=>showAddForm=!showAddForm)
+}
     
 useEffect(()=>{
     fetch('http://localhost:3000/posts')
@@ -22,15 +26,13 @@ useEffect(()=>{
     
 
  return(
-<div className="app" style={{ 
-      backgroundImage: `url("background.jpg")` 
-    }}>
+<div>
 
 <NavBar />
-{/* <button onClick={handleClick} >{showForm ? "LOGIN": "SUBMIT"}</button><br></br>
+<button class= "card" onClick={handleClick} >{showAddForm ? "Click": "Click"} to add new post</button><br></br>
 
-        {showForm ? <Login /> : null} */}
-<NewPost />
+        {showAddForm ? <NewPost /> : null}
+
 <PostsContainer posts={posts}/>
 
 </div>
