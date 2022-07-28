@@ -28,7 +28,7 @@ useEffect(()=>{
     },[])
   
 
-    function handleNewPost(newPostData){
+    function handleNewPost({newPostData}){
         const serverOptions={
             method:"POST",
             headers:{
@@ -41,7 +41,21 @@ useEffect(()=>{
             .then (r=>r.json())
             .then(newPost=>setPosts(posts=>[...posts, newPost
             ]))
+            
     }
+
+function handleDeletePosts(deletedPosts){
+    console.log(deletedPosts)
+}
+
+    function handleDeleteClick(){
+       fetch(`http://localhost:3000/posts/${posts.id}`,{
+
+        method:"DELETE",
+    })
+    .then((r) => r.json())
+    .then(() => console.log("deleted!"));
+}
     
 
  return(
@@ -58,6 +72,10 @@ useEffect(()=>{
       </Routes>
 
 <div>
+
+<button className="remove" onClick={handleDeleteClick}>
+        Delete
+      </button>
 <button  onClick={handleClick} >{showAddForm ? "Click": "Click"} to add new post</button><br></br>
 
 {showAddForm ? <NewPost onSubmission={handleNewPost}/> : null}
