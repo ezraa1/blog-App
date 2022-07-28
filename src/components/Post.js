@@ -1,7 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
+import NewPost from "./NewPost";
 
 function Post({title, content, author}){
-
 
 
     return(
@@ -12,6 +12,7 @@ function Post({title, content, author}){
             <p> {content} </p>
 
             <h4>{author}</h4>
+            
         </div>
     )
 }
