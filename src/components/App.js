@@ -27,6 +27,21 @@ useEffect(()=>{
         setPosts(posts))
     },[])
   
+
+    function handleNewPost(newPostData){
+        const serverOptions={
+            method:"POST",
+            headers:{
+            "Content-Type":"application/json"
+            },
+            body:JSON.stringify(newPostData)}
+
+
+            fetch('http://localhost:3000/posts', serverOptions)
+            .then (r=>r.json())
+            .then(newPost=>setPosts(posts=>[...posts, newPost
+            ]))
+    }
     
 
  return(
@@ -45,7 +60,7 @@ useEffect(()=>{
 <div>
 <button  onClick={handleClick} >{showAddForm ? "Click": "Click"} to add new post</button><br></br>
 
-{showAddForm ? <NewPost /> : null}
+{showAddForm ? <NewPost onSubmission={handleNewPost}/> : null}
 </div>
 
       <div>

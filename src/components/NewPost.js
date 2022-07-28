@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 
-function NewPost(onSubmission){
+function NewPost({onSubmission}){
     const[newPostForm, setNewPostForm]= useState({title:"", content:"",author:""})
 
     function handleOnChange(event){
