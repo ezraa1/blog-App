@@ -32,7 +32,7 @@ function NavBar() {
         setShowForm(showForm=>!showForm)
     }
     return (
-      <div class="nav justify-content-end">
+      <div class="navbar navbar-dark sm-primary">
         <NavLink to="/" exact>Home </NavLink>
         <NavLink to="/about" exact> About </NavLink>
         <NavLink to="/login" exact >  <button onClick={handleClick}>{showForm ? "Close":"Login" }</button>  </NavLink>
