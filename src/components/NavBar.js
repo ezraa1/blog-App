@@ -32,10 +32,22 @@ function NavBar() {
         setShowForm(showForm=>!showForm)
     }
     return (
-      <div class="navbar navbar-dark sm-primary">
-        <NavLink to="/" exact>Home </NavLink>
-        <NavLink to="/about" exact> About </NavLink>
-        <NavLink to="/login" exact >  <button onClick={handleClick}>{showForm ? "Close":"Login" }</button>  </NavLink>
+      <div className="nb">
+      <ul>
+      
+      <li><NavLink to="/about" > About Us </NavLink></li>
+      <li><NavLink to="/contact" > Contact Us</NavLink></li>
+      <li><NavLink to="/" >Home </NavLink></li>
+      <li><NavLink to="/post" > Post </NavLink></li>
+
+      <h3>SPORTS TODAY</h3>
+      <li><NavLink to="/login" >  <button onClick={() => setShowForm(prev => !prev)}>Login</button>
+        </NavLink></li>
+        {showForm && <Login/>}
+        
+        
+        
+        </ul>
       </div>
     );
   }

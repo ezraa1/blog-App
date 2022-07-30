@@ -1,17 +1,22 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 
 
 
 function Home(){
-const imgurl = "https://sm.imgix.net/21/17/rmache.jpg?w=640&h=480&auto=compress,format&fit=clip"
+const [posts, setPosts] =useState([])
 
-
+    useEffect(() => {
+        fetch("http://localhost:3000/posts")
+          .then((r) => r.json())
+          .then((posts) => setPosts(posts));
+      }, []);
 
     return(
 <div>
-    <img src={imgurl} alt="HOME" />
+
 </div>
     )
+    
 }
 export default Home;

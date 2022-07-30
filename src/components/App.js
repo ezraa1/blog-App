@@ -1,100 +1,79 @@
 import React, { useEffect, useState } from "react";
-import {  Route, Routes } from "react-router-dom";
-import Home from "./Home";
-import About from "./About";
-import Login from "./Login";
-import NavBar from "./NavBar";
 import PostsContainer from "./PostsContainer";
+import NavBar from "./NavBar";
 import NewPost from "./NewPost";
-
+import { Routes, Route } from "react-router-dom";
+import Login from "./Login";
+import About from "./About";
+import Contact from "./Contact";
+import Home from "./Home";
+import Post from "./Post";
 
  
 
-function App(){
+function App({post, onDeletePost}){
     
 const[posts, setPosts]=useState([])
-const [showAddForm, setShowAddForm]=useState(false)
+const[showForm, setShowForm]= useState(false)
+ 
 
-function handleClick(){
-    setShowAddForm(showAddForm=>showAddForm=!showAddForm)
-}
-    
-useEffect(()=>{
-    fetch('http://localhost:3000/posts')
-    
-    .then((response) => response.json())
-    .then(posts => 
-        setPosts(posts))
-    },[])
+useEffect(() => {
+    fetch("http://localhost:3000/posts")
+      .then((r) => r.json())
+      .then((posts) => setPosts(posts));
+  }, []);
+
   
 
-    function handleNewPost({newPostData}){
-        const serverOptions={
-            method:"POST",
-            headers:{
-            "Content-Type":"application/json"
-            },
-            body:JSON.stringify(newPostData)}
+    function handleClick(){
+        setShowForm(showForm=>!showForm)
 
-
-            fetch('http://localhost:3000/posts', serverOptions)
-            .then (r=>r.json())
-            .then(newPost=>setPosts(posts=>[...posts, newPost
-            ]))
-            
+    }
+    function handleNewPost(newFormData){
+    const serverOptions={
+        method:"POST",
+        headers:{
+        "Content-Type":"application/json"
+        },
+        body:JSON.stringify(newFormData
+        )
+        }
+        fetch('http://localhost:3000/posts', serverOptions)
+        .then(r=>r.json())
+        .then(addedPost=>setPosts(posts=>[...posts, addedPost]))
     }
 
-function handleDeletePosts(deletedPosts){
-    console.log(deletedPosts)
-}
-
-    function handleDeleteClick(){
-       fetch(`http://localhost:3000/posts/${posts.id}`,{
-
-        method:"DELETE",
-    })
-    .then((r) => r.json())
-    .then(() => console.log("deleted!"));
-}
     
 
  return(
-    <div>
-    <NavBar />
-    <Routes>
-
-      <Route path="/about" element={<About />} />
-      
-      <Route path="/login" element=  {<Login />}  />
-      
-      <Route exact path="/" element={<Home />}  />
-      
-      </Routes>
-
 <div>
+<NavBar />
+<Routes>
+      <Route  path="/about"element={< About />} />
+        
+        <Route  path="/contact"element={< Contact />} />
+          
+        
+        {/* <Route  path="/login"element={< Login />} /> */}
+         
+        <Route  path="/"element={< Home />} />
+        <Route path="/post" element={<Post />} />
+         
+        </Routes>
 
-<button className="remove" onClick={handleDeleteClick}>
-        Delete
-      </button>
-<button  onClick={handleClick} >{showAddForm ? "Click": "Click"} to add new post</button><br></br>
 
-{showAddForm ? <NewPost onSubmission={handleNewPost}/> : null}
-</div>
+         <button onClick={handleClick} >{showForm ? "Close":"Create "} Post</button><br></br>
+         
+        {showForm ? <NewPost onSubmission={handleNewPost} />: null}  
 
-      <div>
-      <PostsContainer posts={posts}/>
-      </div>
-  </div>
+<PostsContainer posts={posts}/>
+
+    <Home/>
+    
+        </div>
 
 
-
-/* <button  onClick={handleClick} >{showAddForm ? "Click": "Click"} to add new post</button><br></br>
-
-        {showAddForm ? <NewPost /> : null}
-
-<PostsContainer posts={posts}/> */
 
  )
- 
 }
  export default App;
