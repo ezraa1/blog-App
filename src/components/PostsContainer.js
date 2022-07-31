@@ -4,6 +4,7 @@ import { useState } from "react";
 import PostDelete from "./PostDelete";
 import NewPost from "./NewPost";
 
+
 function PostsContainer(){
 
 const [posts, setPosts]= useState([])
@@ -25,6 +26,7 @@ setPosts([...posts])
   
 
 <div>
+
 {posts.map((posts)=>(<Post key={posts.id} title={posts.title} content={posts.content} author = {posts.author} >
   <button>remove</button>
   </Post>)) }

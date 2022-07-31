@@ -7,9 +7,9 @@ body {
   -moz-osx-font-smoothing: grayscale;
   margin-right: 10px;
   margin-left: 20px;
-  /* background-image: url("background.jpg" ); */
+  background-image: url("background.jpg" );
   background-repeat: no-repeat;
-  background-size:155vh;
+  background-size:200vh;
   
 }
 
@@ -18,31 +18,38 @@ code {
     monospace;
 }
 /* NavBar styling */
-
+@media only screen and (min-width: 600px){
 .nb{
   background-color: rgb(177, 84, 122);
   padding-bottom: 20px;
   padding-top: 3px;
   box-shadow: 5px 10px 18px white ;
 }
-.nb li{
+.nb li {
   float:right;
   display: inline;
   padding-right: 20px;
+  text-decoration: none;
+  
+  
 }
-.navbar h3{
-  margin-left: 150px;
-  margin-top: -2%;
+
+.nb h3{
+ 
+  font-family: 'Brush Script MT', monospace;
+}
 }
 /* newform styling */
 .fm{
   float:right;
-  border:rgb(219, 202, 202) 1px solid;
-  box-shadow: 10px 15px 18px rgb(226, 139, 139);
-  
+  border:rgb(219, 202, 202) ;
+  box-shadow: 10px 15px 18px white;
+  background-color: rgb(177, 84, 122);
+  padding: 10px;
 }
 
 /* postscontainer styling */
+@media only screen and (min-width: 1024px){
 .posts-container{
   
   padding: 10px;
@@ -50,7 +57,16 @@ code {
   height: 200px;
   text-align: justify;
 }
+}
 /* contact styling */
 .contact i{
 padding: 10px;
+}
+/* styling login */
+.login{
+  border: 0px solid black;
+  margin-right: 80.5%;
+  margin-top: 5px;
+  box-shadow: 5px 10px 13px white;
+  border-radius: 20px;
 }
