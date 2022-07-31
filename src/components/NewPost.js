@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Home from "./Home";
 
 
 function NewPost({onSubmission}){
@@ -18,7 +19,7 @@ function NewPost({onSubmission}){
             event.preventDefault()
             onSubmission(newPostForm)
             setNewPostForm({title:"",content:"", author:""} )
-            
+           return <Home />
             
         }
 

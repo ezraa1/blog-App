@@ -39,11 +39,12 @@ function NavBar() {
      
 
       <h3>SPORTS TODAY</h3>
-      <NavLink to="/login" >  <button onClick={() => setShowForm(prev => !prev)}>Login</button>
-        </NavLink>
+      <div>
+       <button onClick={() => setShowForm(prev => !prev)}>Login</button>
+        
         {showForm && <Login/>}
         
-        
+        </div>
         
         </ul>
       </div>

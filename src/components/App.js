@@ -22,23 +22,9 @@ const[posts, setPosts]=useState([])
 
   
 
-    function handleClick(){
-        setShowForm(showForm=>!showForm)
+    
 
-    }
-    function handleNewPost(newFormData){
-    const serverOptions={
-        method:"POST",
-        headers:{
-        "Content-Type":"application/json"
-        },
-        body:JSON.stringify(newFormData
-        )
-        }
-        fetch('http://localhost:3000/posts', serverOptions)
-        .then(r=>r.json())
-        .then(addedPost=>setPosts(posts=>[...posts, addedPost]))
-    }
+  
 
     
 
@@ -59,9 +45,9 @@ const[posts, setPosts]=useState([])
         </Routes>
 
 
-         <button onClick={handleClick} >{showForm ? "Close":"Create "} Post</button><br></br>
          
-        {showForm ? <NewPost onSubmission={handleNewPost} />: null}  
+         
+       
 
 <PostsContainer />
 
@@ -72,5 +58,5 @@ const[posts, setPosts]=useState([])
 
 
  )
-}
+ }
  export default App;

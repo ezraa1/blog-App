@@ -3,31 +3,13 @@ import NewPost from "./NewPost";
 
 function Login(){
   const [show, setShow] = useState(false);
-  const[posts, setPosts]=useState([])
 
   function handleClick(){
-    setShow(true)
-}
-
-  function handleNewPost(newFormData){
-    const serverOptions={
-        method:"POST",
-        headers:{
-        "Content-Type":"application/json"
-        },
-        body:JSON.stringify(newFormData
-        )
-        }
-        fetch('http://localhost:3000/posts', serverOptions)
-        .then(r=>r.json())
-        .then(addedPost=>setPosts(posts=>[...posts, addedPost]))
-    }
-
-
-
+    setShow(show=>!show)
+  }
     return(
         <div className="login">
-      {show ?<button onClick={handleClick} >{show ? "Close":"Create "}Post</button>: null}
+      {/* {show ?<button onClick={handleClick} >{show ? "Close":"Create "}Post</button>: null} */}
         <form> 
         
         <label>
@@ -42,6 +24,7 @@ function Login(){
         <button onClick={handleClick}>Submit</button>
          
       </form>
+      
       </div>
     )
 }

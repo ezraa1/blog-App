@@ -59,8 +59,16 @@ code {
 }
 }
 /* contact styling */
+.contact{
+  padding-bottom: 50%;
+  margin-left: 20%;
+  color:rgb(177, 84, 122);
+  
+}
 .contact i{
-padding: 10px;
+padding: 30px;
+color: aliceblue;
+
 }
 /* styling login */
 .login{
@@ -70,3 +78,22 @@ padding: 10px;
   box-shadow: 5px 10px 13px white;
   border-radius: 20px;
 }
+/* style buttons */
+button{
+  border-radius: 30px;
+  border: 0px;
+}
+.dlt button{
+  color: red;
+}
+/* style image */
+.image img{
+  height: 123vh;
+}
+
+.image p{
+   margin-top: -55%;
+   padding-bottom: 50%;
+   align-items: center;
+}
+ 

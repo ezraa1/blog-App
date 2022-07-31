@@ -10,7 +10,7 @@ function PostDelete({posts, onDeleteClick}) {
         onDeleteClick(id);
       }
   return (
-    <div>
+    <div className="dlt">
         <button  onClick={handleDeleteClick} > Delete</button>
       </div>
   )

@@ -5,7 +5,7 @@ function Contact(){
 // alert("contact me")
     return(
         <div className="contact">
-<h3>contact</h3>
+<h1>WE VALUE YOUR RESPONSE</h1>
 <i class="fa fa-twitter-square"></i>
 <i class="fa fa-facebook-square"></i>
 <i class="fa fa-instagram"></i>
