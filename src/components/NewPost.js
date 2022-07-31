@@ -3,13 +3,14 @@ import React, { useState } from "react";
 
 function NewPost({onSubmission}){
     const[newPostForm, setNewPostForm]= useState({title:"", content:"",author:""})
- 
-// remove
+    
+
 
 
 ;
 
     function handleOnChange(event){
+        event.preventDefault()
         setNewPostForm(newPostForm=>({...newPostForm,[event.target.name]: event.target.value}))
         }
 
@@ -17,7 +18,7 @@ function NewPost({onSubmission}){
             event.preventDefault()
             onSubmission(newPostForm)
             setNewPostForm({title:"",content:"", author:""} )
-            return false;
+            
             
         }
 
@@ -26,7 +27,7 @@ return(
 
     <form onSubmit={handleSubmit} className="fm">
     Title:<br></br>
-<input onChange={handleOnChange} name="title" value={newPostForm.title} placeholder="Title" /><br></br>
+<input onChange={handleOnChange} name="title" value={newPostForm.title} placeholder="Topic" /><br></br>
 Username:<br></br>
 <input onChange={handleOnChange} name="author" value={newPostForm.author} placeholder="your username" /><br></br>
 Content:<br></br>

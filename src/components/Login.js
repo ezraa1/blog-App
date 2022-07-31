@@ -26,7 +26,7 @@ function Login(){
 
 
     return(
-        <div>
+        <div className="login">
       {show ?<button onClick={handleClick} >{show ? "Close":"Create "}Post</button>: null}
         <form> 
         

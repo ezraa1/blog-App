@@ -9,12 +9,13 @@ import Contact from "./Contact";
 import Home from "./Home";
 import Post from "./Post";
 import PostDelete from "./PostDelete";
+
  
 
 function App({post, onDeletePost}){
     
 const[posts, setPosts]=useState([])
-const[showForm, setShowForm]= useState(false)
+    const[showForm, setShowForm]= useState(false)
  
 
 
@@ -53,7 +54,7 @@ const[showForm, setShowForm]= useState(false)
         {/* <Route  path="/login"element={< Login />} /> */}
          
         <Route  path="/"element={< Home />} />
-        <Route path="/post" element={<Post />} />
+        {/* <Route path="/post" element={<Post />} /> */}
          
         </Routes>
 
@@ -64,8 +65,8 @@ const[showForm, setShowForm]= useState(false)
 
 <PostsContainer />
 
-    <Home/>
-    
+    {/* <Home/> */}
+    {/* <ReadMore/> */}
         </div>
 
 
