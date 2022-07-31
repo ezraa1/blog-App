@@ -6,7 +6,7 @@ function NewPost({onSubmission}){
  
 // remove
 
-const [posts, setPosts]= useState()
+
 ;
 
     function handleOnChange(event){
@@ -17,6 +17,7 @@ const [posts, setPosts]= useState()
             event.preventDefault()
             onSubmission(newPostForm)
             setNewPostForm({title:"",content:"", author:""} )
+            return false;
             
         }
 
@@ -30,7 +31,7 @@ Username:<br></br>
 <input onChange={handleOnChange} name="author" value={newPostForm.author} placeholder="your username" /><br></br>
 Content:<br></br>
 <textarea  onChange={handleOnChange} name="content" value={newPostForm.content} placeholder="Type the news..." rows={10} /><br></br>
-<input type="submit" value="Submit" />
+<input type="submit" value="Publish" />
 
 </form>
 {/* <div className="delete" onClick={() => removePost(posts._id)}>

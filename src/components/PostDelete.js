@@ -2,14 +2,16 @@ import React from "react";
 
 
 function PostDelete({posts, onDeleteClick}) {
-    const { id, } = posts;
+    let id = 0;
 
     function handleDeleteClick() {
+
+        id--;
         onDeleteClick(id);
       }
   return (
     <div>
-        <button  onClick={handleDeleteClick} className='imageButton2 imageButton3'> Dlt</button>
+        <button  onClick={handleDeleteClick} > Delete</button>
       </div>
   )
 }
