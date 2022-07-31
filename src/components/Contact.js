@@ -2,9 +2,9 @@ import React from "react";
 
 
 function Contact(){
-
+// alert("contact me")
     return(
-        <div>
+        <div className="contact">
 <h3>contact</h3>
 <i class="fa fa-twitter-square"></i>
 <i class="fa fa-facebook-square"></i>

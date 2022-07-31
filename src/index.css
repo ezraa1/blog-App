@@ -50,3 +50,7 @@ code {
   height: 200px;
   text-align: justify;
 }
+/* contact styling */
+.contact i{
+padding: 10px;
+}

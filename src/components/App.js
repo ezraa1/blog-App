@@ -8,7 +8,7 @@ import About from "./About";
 import Contact from "./Contact";
 import Home from "./Home";
 import Post from "./Post";
-
+import PostDelete from "./PostDelete";
  
 
 function App({post, onDeletePost}){
@@ -17,11 +17,7 @@ const[posts, setPosts]=useState([])
 const[showForm, setShowForm]= useState(false)
  
 
-useEffect(() => {
-    fetch("http://localhost:3000/posts")
-      .then((r) => r.json())
-      .then((posts) => setPosts(posts));
-  }, []);
+
 
   
 
@@ -66,7 +62,7 @@ useEffect(() => {
          
         {showForm ? <NewPost onSubmission={handleNewPost} />: null}  
 
-<PostsContainer posts={posts}/>
+<PostsContainer />
 
     <Home/>
     

@@ -6,7 +6,8 @@ function NewPost({onSubmission}){
  
 // remove
 
-
+const [posts, setPosts]= useState()
+;
 
     function handleOnChange(event){
         setNewPostForm(newPostForm=>({...newPostForm,[event.target.name]: event.target.value}))
@@ -32,6 +33,9 @@ Content:<br></br>
 <input type="submit" value="Submit" />
 
 </form>
+{/* <div className="delete" onClick={() => removePost(posts._id)}>
+              Remove Ite
+            </div> */}
 </div>
 )
 
