@@ -14,53 +14,28 @@ useEffect(() => {
     .then((posts) => setPosts(posts));
 }, []);
 
-const removePost = (id) => {
-    if (window.confirm("Do you want to delete this post?")) {
-      posts.forEach((posts, index) => {
-        if (posts._id === id) {
-          posts.splice(index, 1);
-        }
-      });
-      setPosts([...posts]); 
-      // console.log([...posts])
-    }
-  }
 
   function handleDeleteClick(id) {
-    fetch(`http://localhost:3000/posts ${id}`, {
-      method: "DELETE",
-    })
-      .then((r) => r.json())
-      .then(() => {
-        const updatedPosts = posts.filter((posts) => posts._id !== id);
-        setPosts(updatedPosts );
-        const removePost = (id) => {
-          if (window.confirm("Do you want to delete this post?")) {
-            posts.forEach((posts, index) => {
-              if (posts._id === id) {
-                posts.splice(index, 1);
-              }
-            });
-            setPosts([...posts]); 
-            // console.log([...posts])
-          }
-        }
-      });
-    }
-return(
+if (window.confirm("Do you want to delete this post?")){
+posts.splice(id,1);
+}
+setPosts([...posts])
+  }
+    return(
   
 
 <div>
 {posts.map((posts)=>(<Post key={posts.id} title={posts.title} content={posts.content} author = {posts.author} >
-  
+  <button>remove</button>
   </Post>)) }
   <div>
   <PostDelete
                                  key={posts.id}
                                  posts={posts}
                                 onDeleteClick={handleDeleteClick}
-
+         
                               />
+                              
   </div>
   </div>
 
