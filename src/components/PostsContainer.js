@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import Post from "./Post";
 import { useState } from "react";
 import PostDelete from "./PostDelete";
-import NewPost from "./NewPost";
+
 
 
 function PostsContainer(){
@@ -10,7 +10,7 @@ function PostsContainer(){
 const [posts, setPosts]= useState([])
 
 useEffect(() => {
-  fetch("http://localhost:3000/posts")
+  fetch("https://my-server1121.herokuapp.com/posts" )
     .then((r) => r.json())
     .then((posts) => setPosts(posts));
 }, []);

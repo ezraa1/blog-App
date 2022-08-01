@@ -1,7 +1,5 @@
-import React, {useHistory, useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
-import NewPost from "./NewPost";
-import PostsContainer from "./PostsContainer";
+import React from "react";
+
 
 
 function Post({title, content, author}){

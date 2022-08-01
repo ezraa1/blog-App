@@ -12,12 +12,13 @@ function Login(){
       const serverOptions={
           method:"POST",
           headers:{
-          "Content-Type":"application/json"
+          "Content-Type":"application/json",
+          'Accept': 'application/json'
           },
           body:JSON.stringify(newFormData
           )
           }
-          fetch('http://localhost:3000/posts', serverOptions)
+          fetch('https://my-server1121.herokuapp.com/posts', serverOptions)
           .then(r=>r.json())
           .then(addedPost=>setPosts(posts=>[...posts, addedPost]))
       }
