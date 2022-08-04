@@ -1,7 +1,7 @@
 # blog-App
 ## By Ezra Kipchirchir
 ### Description
-This is a single page blogging application that allow users to read and post the sport related news
+This is a single page blogging application that allow users to read and post the sport related news and also delete their posts
 
 ### Table of content
 
